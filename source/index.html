@@ -1,10 +1,10 @@
 ---
-title: Assignment 2 Template
+title: Things I Take EVERYWHERE
 ---
 
-<h1>Assignment 2 Template</h1>
+<div class="grid">
+  {% for item in collections.item %} {% include 'item_icon.html' %} {% endfor %}
+  <div class="bag-cell" aria-hidden="true"></div>
+</div>
 
-<p>
-  This is a main page for your collection site. You can edit its contents and
-  add new pages to this folder.
-</p>
+<script src="bagchange.js"></script>

@@ -4,8 +4,16 @@
     <meta charset="utf-8" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/style.css" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Doto:wght@100..900&family=Foldit:wght@100..900&family=Handjet:wght@100..900&family=Major+Mono+Display&family=Rubik+Pixels&family=Story+Script&family=Wallpoet&display=swap');
+    </style>
   </head>
   <body>
-    {{ content }}
+    <!-- I got help from copilot for this part..could not figure it out myself -->
+    <div {% if page.url contains "/pages" %} class="itempage"{% endif %}>
+      <h1>{{ title }}</h1>
+        <img src="{{ photo }}" class="itemphoto" alt="{{ photo }}" />
+      {{ content }}
+    </div>
   </body>
 </html>

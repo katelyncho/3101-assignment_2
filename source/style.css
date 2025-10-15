@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+  color: rgb(243, 236, 223);
+  font-family: "Comic Relief", system-ui;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+  background-color: rgb(24, 21, 27);
+}
+
+/* got help from copilot with the grid part because I didn't know how to put images in the grid in the eleventy way.. */
+.grid .bag-cell {
+  background: url("img/bag_closed.png") center/contain no-repeat;
+  width: 400px;
+  height: 400px;
+  justify-self: center;
+  align-self: center;
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  position: relative;
+  z-index: 99;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px 200px;
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ipad */
+.grid .item-icon:nth-child(1) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* blade */
+.grid .item-icon:nth-child(2) {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+/* eyedrop */
+.grid .item-icon:nth-child(3) {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+/* charger */
+.grid .item-icon:nth-child(4) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+/* headphone */
+.grid .item-icon:nth-child(5) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+/* bandage */
+.grid .item-icon:nth-child(6) {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+.item-icon {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.item-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.grid:not(.bag-open) .item-icon img {
+  visibility: hidden;
+}
+
+.itempage .itemphoto {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-color: rgb(223, 179, 3);
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+}
+
+.itempage {
+  max-width: 600px;
+  text-align: center;
+  align-content: center;
+  font-size: 20px;
+}

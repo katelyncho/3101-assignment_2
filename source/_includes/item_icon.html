@@ -1,0 +1,11 @@
+<div class="item-icon">
+  <a href="{{ item.url }}">
+    {% if item.data.photo %}
+    <img src="{{ item.data.photo }}" alt="{{ item.data.title }}" />
+    {% elsif item.data.images %}
+    <img src="{{ item.data.images[0] }}" alt="{{ item.data.title }}" />
+    {% else %}
+    <img src="/img/placeholder.png" alt="{{ item.data.title }}" />
+    {% endif %}
+  </a>
+</div>

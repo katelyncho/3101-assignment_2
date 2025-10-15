@@ -1,8 +1,7 @@
 ---
 title: I-Pad
-# photo:
+photo: /img/ipad.png
+tags: back
 ---
 
-<!-- #{{ title }} -->
-
-blahblah
+I have a separation anxiety with my ipad. I need it everywhere I go 'just in case'. Usually for drawing.
